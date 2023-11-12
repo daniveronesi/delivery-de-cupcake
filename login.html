@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+</html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="(max-width: 800px)" href="altura-max800.css" />
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Petit Cake</title>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img src="./images/14.png" alt="logo"></a>
+    </header>
+    <section>
+        <div id="login">
+            <h2>Login</h2>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username">
+            <br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password">
+            <br>
+            <button onclick="fazerLogin()">Entrar</button>
+            <p><a href="esqueceu-senha.html">Esqueceu a senha</a> | <a href="./cadastro.html">Criar conta</a></p>
+        </div>
+
+    </section>
+    <script>
+        function fazerLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Você pode adicionar verificação de autenticação aqui
+            // Para este exemplo, vou verificar se o usuário e senha são "admin"
+            if (username === "admin" && password === "admin") {
+                window.location.href = "pagamento.html"; // Redirecionar para a página "pagamento.html"
+            } else {
+                alert("Credenciais inválidas. Tente novamente.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

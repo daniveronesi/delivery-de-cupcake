@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b0c2eb;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #eb6890;
+    /* Cor do título */
+    margin-top: 20px;
+}
+
+h2 {
+    color: #fef7fe;
+    text-align: center;
+}
+
+form {
+    background-color: #b0c2eb;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #b4eb99;
+    color: #bb6cf0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Estilo para o formulário de pagamento */
+#payment-form {
+    margin-top: 30px;
+}
+
+/* Estilo para os formulários de pagamento (dinheiro, cartão de crédito, PIX) */
+#credit-card-form,
+#pix-qr-code {
+    background-color: #b0c2eb;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o QR Code PIX */
+#pix-qr-code img {
+    max-width: 100%;
+}
+
+/* Estilo para os campos de pagamento */
+#payment-form input[type="radio"] {
+    margin-right: 10px;
+}

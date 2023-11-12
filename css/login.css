@@ -1,0 +1,18 @@
+body {
+    background-image: url(../images/19.jpg);
+    font-family: Arial, sans-serif;
+    color: #bb6cf0;
+}
+
+header {
+    text-align: center;
+    margin: auto;
+}
+
+div {
+    text-align: center;
+}
+
+section {
+    background-color: #fef7ee;
+}

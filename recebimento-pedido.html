@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="(max-width: 800px)" href="altura-max800.css" />
+    <title>Petit Cake</title>
+    <style>
+        * {
+            color: #bb6cf0
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b4eb99;
+        }
+
+        .pedido {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./images/14.png" alt="logo">
+    </header>
+    <h1>Pedido Recebido</h1>
+    <div class="pedido">
+        <h2>Detalhes do Pedido</h2>
+        <p><strong>Nome do Cliente:</strong> <span id="nome-cliente"></span></p>
+        <p><strong>Endereço de Entrega:</strong> <span id="endereco-entrega"></span></p>
+
+        <h2>Itens do Pedido</h2>
+        <ul id="itens-pedido">
+            <!-- Os itens do pedido serão adicionados dinamicamente aqui -->
+        </ul>
+    </div>
+
+    <script>
+        // Dados do pedido (nome do cliente, endereço e itens)
+        const dadosPedido = {
+            nomeCliente: "João da Silva",
+            enderecoEntrega: "Rua da Amostra, 123, Cidade Exemplo",
+            itensPedido: ["Item 1", "Item 2", "Item 3"],
+        };
+
+        // Função para exibir os detalhes do pedido na página
+        function exibirDetalhesDoPedido() {
+            const nomeClienteElement = document.getElementById("nome-cliente");
+            const enderecoEntregaElement = document.getElementById("endereco-entrega");
+            const listaItens = document.getElementById("itens-pedido");
+
+            nomeClienteElement.textContent = dadosPedido.nomeCliente;
+            enderecoEntregaElement.textContent = dadosPedido.enderecoEntrega;
+
+            dadosPedido.itensPedido.forEach((item) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = item;
+                listaItens.appendChild(listItem);
+            });
+        }
+
+        // Chame a função para exibir os detalhes do pedido
+        exibirDetalhesDoPedido();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    background-image: url(../images/02.png);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin: auto;
+}
+
+section {
+    background-color: #fef7ee;
+}
+
+h1 {
+    font-size: 60px;
+    color: #eb6890;
+    text-align: center;
+
+}
+
+p {
+    font-size: 35px;
+    text-align: center;
+    color: #eb6890;
+}

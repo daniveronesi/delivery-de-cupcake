@@ -1,0 +1,41 @@
+import sqlite3
+
+# Conectar-se ao banco de dados (ou criar um novo se não existir)
+conn = sqlite3.connect('cupcake_delivery.db')
+cursor = conn.cursor()
+
+# Criar a tabela de clientes
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS clientes (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome_completo TEXT NOT NULL,
+        data_nascimento TEXT,
+        cpf TEXT,
+        endereco TEXT,
+        numero TEXT,
+        bairro TEXT,
+        complemento TEXT,
+        cidade TEXT,
+        estado TEXT,
+        cep TEXT,
+        celular TEXT
+    )
+''')
+
+# Criar a tabela de opções de pagamento
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS opcoes_pagamento (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL
+    )
+''')
+
+# Inserir opções de pagamento
+cursor.execute('INSERT INTO opcoes_pagamento (nome) VALUES ("Dinheiro")')
+cursor.execute(
+    'INSERT INTO opcoes_pagamento (nome) VALUES ("Cartão de Crédito")')
+cursor.execute('INSERT INTO opcoes_pagamento (nome) VALUES ("PIX QR Code")')
+
+# Commit e fechar a conexão
+conn.commit()
+conn.close()

@@ -1,0 +1,30 @@
+body {
+    background-image: url(../images/18.jpg);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #eb6890;
+    font-size: 30px;
+}
+
+form {
+    text-align: center;
+    font-weight: 75px;
+}
+
+button {
+    text-align: center;
+    background-color: #b4eb99;
+    color: #bb6cf0;
+}

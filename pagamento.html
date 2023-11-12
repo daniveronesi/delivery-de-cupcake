@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="(max-width: 800px)" href="altura-max800.css" />
+    <link rel="stylesheet" href="./css/pagamento.css">
+    <title>Petit Cake</title>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img src="./images/14.png" alt="logo"></a>
+    </header>
+
+    <h2>Opções de Pagamento</h2>
+    <form id="payment-form">
+        <input type="radio" name="payment-option" value="money"> Dinheiro (Pagar na entrega)
+        <input type="radio" name="payment-option" value="credit-card"> Cartão de Crédito
+        <input type="radio" name="payment-option" value="pix"> PIX
+    </form>
+
+    <div id="credit-card-form" style="display: none;">
+        <h2>Informações do Cartão de Crédito</h2>
+        <label for="card-number">Número do Cartão:</label><br>
+        <input type="text" id="card-number" name="card-number" required><br>
+        <label for="card-holder">Nome do Titular:</label><br>
+        <input type="text" id="card-holder" name="card-holder" required><br>
+        <label for="expiration-date">Data de Expiração:</label><br>
+        <input type="text" id="expiration-date" name="expiration-date" required><br>
+        <label for="cvv">CVV:</label><br>
+        <input type="text" id="cvv" name="cvv" required><br>
+    </div>
+
+    <!-- Imagem do QR Code para PIX -->
+    <div id="pix-qr-code" style="display: none;">
+        <h2>QR Code PIX</h2>
+        <img src="./images/qrcode.png" alt="QR Code PIX">
+    </div>
+
+    <button type="button" id="submit-button">Finalizar Pedido</button>
+
+    <script>
+        const paymentForm = document.getElementById("payment-form");
+        const creditCardForm = document.getElementById("credit-card-form");
+        const pixQrCode = document.getElementById("pix-qr-code");
+        const submitButton = document.getElementById("submit-button");
+
+        paymentForm.addEventListener("change", function () {
+            const selectedPaymentOption = document.querySelector('input[name="payment-option"]:checked').value;
+
+            if (selectedPaymentOption === "credit-card") {
+                creditCardForm.style.display = "block";
+                pixQrCode.style.display = "none"; // Corrigido aqui
+            } else if (selectedPaymentOption === "pix") {
+                creditCardForm.style.display = "none";
+                pixQrCode.style.display = "block";
+            } else {
+                creditCardForm.style.display = "none";
+                pixQrCode.style.display = "none";
+            }
+        });
+
+        submitButton.addEventListener("click", function () {
+            const selectedPaymentOption = document.querySelector('input[name="payment-option"]:checked').value;
+
+            if (selectedPaymentOption === "money") {
+                alert("Pedido finalizado! Pagamento na entrega.");
+                window.location.href = "pedido-concluido.html";
+            } else if (selectedPaymentOption === "credit-card") {
+                // Aqui você pode processar o formulário de cartão de crédito e verificar se o pagamento foi aprovado.
+
+                // Simule a aprovação do pagamento (substitua por sua lógica real).
+                const paymentApproved = true;
+
+                if (paymentApproved) {
+                    window.location.href = "pedido-concluido.html";
+                } else {
+                    alert("O pagamento não foi aprovado. Por favor, verifique suas informações de pagamento.");
+                }
+            } else if (selectedPaymentOption === "pix") {
+                // Aqui você pode processar o pagamento via PIX e verificar se foi aprovado.
+
+                // Simule a aprovação do pagamento (substitua por sua lógica real).
+                const paymentApproved = true;
+
+                if (paymentApproved) {
+                    window.location.href = "pedido-concluido.html";
+                } else {
+                    alert("O pagamento via PIX não foi aprovado. Por favor, verifique suas informações de pagamento.");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

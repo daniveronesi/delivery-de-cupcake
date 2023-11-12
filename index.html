@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="(max-width: 800px)" href="altura-max800.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Petit Cake</title>
+</head>
+
+<body>
+    <header>
+        <h1><img src="./images/14.png" alt="logo"></h1>
+    </header>
+    <main>
+        <section class="cupcake-menu">
+            <h2>Cardápio</h2>
+            <ul>
+                <li>
+                    <div class="cupcake">
+                        <img src="./images/04.jpg" alt="Cupcake de Morango" height="300px">
+                        <h3>Cupcake de Morango</h3>
+                        <p>Este cupcake é uma explosão de sabor refrescante de morangos maduros. A base do bolo é macia
+                            e úmida, e o recheio é feito com um delicioso purê de morango, que adiciona um toque doce e
+                            frutado. A cobertura é decorada com um delicado glacê de morango e é coroada com um morango
+                            fresco, proporcionando um contraste agridoce que vai fazer sua boca se encher de água.</p>
+                        <span class="price">R$ 8,99</span>
+                        <button class="order-button">Pedir</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="cupcake">
+                        <img src="./images/03.jpg" alt="Cupcake de Chocolate" height="300px">
+                        <h3>Cupcake de Chocolate</h3>
+                        <p>O cupcake de chocolate é uma escolha clássica para os amantes de chocolate. A base do bolo é
+                            rica e intensa, com um sabor profundo de cacau. No topo, você encontrará uma generosa camada
+                            de ganache de chocolate que derrete na boca, e para finalizar, lascas de chocolate ou
+                            confeitos podem ser adicionados para dar um toque extra de textura e sabor.</p>
+                        <span class="price">R$ 8,99</span>
+                        <button class="order-button">Pedir</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="cupcake">
+                        <img src="./images/11.jpg" alt="Cupcake de Baunilha" height="300px">
+                        <h3>Cupcake de Baunilha</h3>
+                        <p>Um cupcake de baunilha é uma opção elegante e simples. A base do bolo é leve e macia, com uma
+                            nota suave de baunilha. A cobertura é feita com um cremoso glacê de baunilha que é
+                            delicadamente decorado com confeitos coloridos, tornando-o perfeito para qualquer ocasião.
+                        </p>
+                        <span class="price">R$ 7,99</span>
+                        <button class="order-button">Pedir</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="cupcake">
+                        <img src="./images/15.jpg" alt="Cupcake de Caramelo" height="350px">
+                        <h3>Cupcake de Caramelo</h3>
+                        <p>O cupcake de caramelo é uma indulgência doce e reconfortante. A base do bolo tem um sabor de
+                            caramelo suave, e é recheado com um creme de caramelo pegajoso que flui no centro quando
+                            você o morde. A cobertura é generosamente coberta com um glacê de caramelo cremoso e pode
+                            ser decorada com flocos de sal marinho para um contraste saboroso.</p>
+                        <span class="price">R$ 7,99</span>
+                        <button class="order-button">Pedir</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="cupcake">
+                        <img src="./images/16.jpg" alt="Cupcake de Doce de Leite" height="350px">
+                        <h3>Cupcake de Doce de Leite</h3>
+                        <p>Este cupcake é uma celebração do doce de leite, com uma base de bolo que possui um toque de
+                            doçura característico. O recheio é uma camada de doce de leite cremoso que adiciona uma
+                            textura rica e um sabor irresistível. A cobertura é coberta com mais doce de leite e pode
+                            ser decorada com um toque de canela em pó para realçar os sabores.</p>
+                        <span class="price">R$ 7,99</span>
+                        <button class="order-button">Pedir</button>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+        <section class="order-summary">
+            <h2>Resumo do Pedido</h2>
+            <ul id="order-list">
+                <!-- Itens do pedido serão adicionados aqui via JavaScript -->
+            </ul>
+            <p>Total: R$ <span id="total-price">0.00</span></p>
+            <button id="checkout-button">Finalizar Pedido</button>
+            <button id="remove-item-button">Remover Item</button>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
